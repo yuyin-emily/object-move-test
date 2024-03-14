@@ -6,10 +6,13 @@ public class controller : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject ball;
+    public DeviceType device;
 
     void Start()
     {
         ball = GameObject.Find("ball");
+        device = SystemInfo.deviceType;
+        print(device.ToString());
     }
 
     // Update is called once per frame

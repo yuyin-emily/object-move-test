@@ -13,13 +13,6 @@ public class ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( Input.GetMouseButton(0) )
-        {
-            this.gameObject.SetActive(false);
-        }
-        else if ( Input.GetMouseButton(1) )
-        {
-            this.gameObject.SetActive(true);
-        }
+        
     }
 }
