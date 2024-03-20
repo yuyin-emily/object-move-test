@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class controller : MonoBehaviour
 {
@@ -21,13 +23,20 @@ public class controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( Input.GetMouseButton(0) )
+        if(Input.touchCount == 1)
         {
             ball.SetActive(false);
         }
-        else if ( Input.GetMouseButton(1) )
+        else
         {
             ball.SetActive(true);
         }
+        
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(5);
+        ball.SetActive(true);
     }
 }
